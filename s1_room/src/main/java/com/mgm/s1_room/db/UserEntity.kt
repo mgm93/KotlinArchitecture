@@ -3,6 +3,7 @@ package com.mgm.s1_room.db
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+
 import com.mgm.s1_room.utils.Constants
 
 /**
