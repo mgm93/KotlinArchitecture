@@ -18,7 +18,7 @@ interface UserDao {
     @Delete
     fun deleteUser(userEntity: UserEntity)
 
-    @Query("SELECT * from ${Constants.USER_TABLE}")
+    @Query("SELECT * from ${Constants.USER_TABLE} ORDER BY userId DESC")
     fun getAllUser(): MutableList<UserEntity>
 
     @Query("SELECT * FROM ${Constants.USER_TABLE} WHERE userId LIKE :id")
