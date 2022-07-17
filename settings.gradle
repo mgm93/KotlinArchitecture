@@ -15,3 +15,4 @@ dependencyResolutionManagement {
 rootProject.name = "KotlinArchitecture"
 include ':app'
 include ':s1_room'
+include ':s1_retrofit'
