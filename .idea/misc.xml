@@ -16,8 +16,14 @@
         <entry key="..\:/work/KotlinArchitecture/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/work/KotlinArchitecture/app/src/main/res/layout/fragment_test.xml" value="0.19010416666666666" />
         <entry key="..\:/work/KotlinArchitecture/s1_navigation/src/main/res/layout/activity_main.xml" value="0.12092391304347826" />
+        <entry key="..\:/work/KotlinArchitecture/s1_navigation/src/main/res/layout/fragment_cards.xml" value="0.16802536231884058" />
         <entry key="..\:/work/KotlinArchitecture/s1_navigation/src/main/res/layout/fragment_details.xml" value="0.12092391304347826" />
+        <entry key="..\:/work/KotlinArchitecture/s1_navigation/src/main/res/layout/fragment_home.xml" value="0.16802536231884058" />
         <entry key="..\:/work/KotlinArchitecture/s1_navigation/src/main/res/layout/fragment_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/work/KotlinArchitecture/s1_navigation/src/main/res/layout/fragment_products.xml" value="0.16802536231884058" />
+        <entry key="..\:/work/KotlinArchitecture/s1_navigation/src/main/res/layout/fragment_profile.xml" value="0.16802536231884058" />
+        <entry key="..\:/work/KotlinArchitecture/s1_navigation/src/main/res/layout/fragment_search.xml" value="0.16802536231884058" />
+        <entry key="..\:/work/KotlinArchitecture/s1_navigation/src/main/res/menu/bottom_menu.xml" value="0.20416666666666666" />
       </map>
     </option>
   </component>
