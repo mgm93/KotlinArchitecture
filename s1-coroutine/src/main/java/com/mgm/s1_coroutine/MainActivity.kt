@@ -80,12 +80,43 @@ class MainActivity : AppCompatActivity() {
         /**
          * change ui on IO Thread
          */
-        CoroutineScope(Dispatchers.IO).launch {
+        /*CoroutineScope(Dispatchers.IO).launch {
             doWork1()
             withContext(Dispatchers.Main){
                 binding.infoTxt.text = "Done"
             }
+        }*/
+
+        /**
+         * repeat coroutine
+         */
+        /*CoroutineScope(Dispatchers.IO).launch {
+            repeat(3){
+                doWork1()
+            }
+        }*/
+
+        /**
+         * timeout coroutine
+         */
+        CoroutineScope(Dispatchers.IO).launch {
+            withTimeoutOrNull(4000){
+                for (i in 1000..1100){
+                    Log.e(TAG, i.toString())
+                    delay(1000)
+                }
+            }
+
+            /*val time = measureTimeMillis {
+                for (i in 1000..10000){
+                    Log.e(TAG, i.toString())
+//                    delay(1000)
+                }
+            }
+
+            Log.e(TAG, time.toString())*/
         }
+
     }
 
     private suspend fun doWork1(){
