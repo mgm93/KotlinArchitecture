@@ -1,16 +1,14 @@
 package com.mgm.s1_coroutine
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 import com.mgm.s1_coroutine.databinding.ActivityMainBinding
 import kotlinx.coroutines.*
-import kotlin.system.measureTimeMillis
-import kotlin.time.measureTime
 
 class MainActivity : AppCompatActivity() {
     //Binding
-    private lateinit var binding:ActivityMainBinding
+    private lateinit var binding: ActivityMainBinding
 
     //Other
     private val TAG = "coroutineTag"
@@ -26,9 +24,10 @@ class MainActivity : AppCompatActivity() {
         }*/
 
 /*        CoroutineScope(Dispatchers.Main).launch {
-            *//**
-             * do tasks synchronized
-             *//*
+            */
+        /**
+         * do tasks synchronized
+         *//*
 *//*
             val time  = measureTimeMillis {
                 val result1 = task1()
@@ -38,10 +37,11 @@ class MainActivity : AppCompatActivity() {
             }
             Log.e(TAG, time.toString())*//*
 
-            *//**
-             * do tasks Asynchronized
-             *
-             *//*
+            */
+        /**
+         * do tasks Asynchronized
+         *
+         *//*
             val result1 = async { task1() }
             val result2 = async { task2() }
             var finalResult = ""
@@ -100,15 +100,15 @@ class MainActivity : AppCompatActivity() {
         /**
          * timeout coroutine
          */
-       /* CoroutineScope(Dispatchers.IO).launch {
-            withTimeoutOrNull(4000){
-                for (i in 1000..1100){
-                    Log.e(TAG, i.toString())
-                    delay(1000)
-                }
-            }
+        /* CoroutineScope(Dispatchers.IO).launch {
+             withTimeoutOrNull(4000){
+                 for (i in 1000..1100){
+                     Log.e(TAG, i.toString())
+                     delay(1000)
+                 }
+             }
 
-            *//*val time = measureTimeMillis {
+             *//*val time = measureTimeMillis {
                 for (i in 1000..10000){
                     Log.e(TAG, i.toString())
 //                    delay(1000)
@@ -121,42 +121,57 @@ class MainActivity : AppCompatActivity() {
         /**
          * Job
          */
-        job = CoroutineScope(Dispatchers.Main).launch {
-            Log.e(TAG, "Coroutine working...")
-            delay(1000)
-        }
+        /*     job = CoroutineScope(Dispatchers.Main).launch {
+                 Log.e(TAG, "Coroutine working...")
+                 delay(1000)
+             }
 
-//        job.cancel()
+     //        job.cancel()
+             CoroutineScope(Dispatchers.Main).launch {
+                 delay(2000)
+                 Log.e(TAG, "isActive:" + job.isActive)
+                 Log.e(TAG, "isCancelled:" + job.isCancelled)
+                 Log.e(TAG, "isCompleted:" + job.isCompleted)
+             }*/
+
+        /**
+         * Job cancel and join
+         */
         CoroutineScope(Dispatchers.Main).launch {
-            delay(2000)
-            Log.e(TAG, "isActive:" + job.isActive)
-            Log.e(TAG, "isCancelled:" + job.isCancelled)
-            Log.e(TAG, "isCompleted:" + job.isCompleted)
+            job = CoroutineScope(Dispatchers.Main).launch {
+                repeat(3) {
+                    Log.e(TAG, "Coroutine working inner")
+                    delay(1000)
+                }
+            }
+            delay(4000)
+            job.cancelAndJoin()
+            Log.e(TAG, "Coroutine working")
         }
 
     }
 
-    private suspend fun doWork1(){
+    private suspend fun doWork1() {
         delay(1000)
         Log.e(TAG, "work1")
     }
 
-    private suspend fun doWork2(){
+    private suspend fun doWork2() {
         delay(1000)
-        Log.e(TAG,"work2")
+        Log.e(TAG, "work2")
     }
 
-    private suspend fun task1():String{
+    private suspend fun task1(): String {
         delay(2000)
         return "result 1"
     }
 
-    private suspend fun task2():String{
+    private suspend fun task2(): String {
         delay(3000)
         return "result 2"
     }
 
-    private suspend fun shoMyLog(){
+    private suspend fun shoMyLog() {
         delay(3000)
         Log.e(TAG, Thread.currentThread().name)
     }
