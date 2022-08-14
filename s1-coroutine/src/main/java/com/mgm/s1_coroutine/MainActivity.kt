@@ -14,6 +14,7 @@ class MainActivity : AppCompatActivity() {
 
     //Other
     private val TAG = "coroutineTag"
+    private lateinit var job: Job
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -99,7 +100,7 @@ class MainActivity : AppCompatActivity() {
         /**
          * timeout coroutine
          */
-        CoroutineScope(Dispatchers.IO).launch {
+       /* CoroutineScope(Dispatchers.IO).launch {
             withTimeoutOrNull(4000){
                 for (i in 1000..1100){
                     Log.e(TAG, i.toString())
@@ -107,14 +108,30 @@ class MainActivity : AppCompatActivity() {
                 }
             }
 
-            /*val time = measureTimeMillis {
+            *//*val time = measureTimeMillis {
                 for (i in 1000..10000){
                     Log.e(TAG, i.toString())
 //                    delay(1000)
                 }
             }
 
-            Log.e(TAG, time.toString())*/
+            Log.e(TAG, time.toString())*//*
+        }*/
+
+        /**
+         * Job
+         */
+        job = CoroutineScope(Dispatchers.Main).launch {
+            Log.e(TAG, "Coroutine working...")
+            delay(1000)
+        }
+
+//        job.cancel()
+        CoroutineScope(Dispatchers.Main).launch {
+            delay(2000)
+            Log.e(TAG, "isActive:" + job.isActive)
+            Log.e(TAG, "isCancelled:" + job.isCancelled)
+            Log.e(TAG, "isCompleted:" + job.isCompleted)
         }
 
     }
