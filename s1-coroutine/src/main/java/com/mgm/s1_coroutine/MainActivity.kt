@@ -1,8 +1,11 @@
 package com.mgm.s1_coroutine
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.LifecycleCoroutineScope
+import androidx.lifecycle.lifecycleScope
 import com.mgm.s1_coroutine.databinding.ActivityMainBinding
 import kotlinx.coroutines.*
 
@@ -137,7 +140,7 @@ class MainActivity : AppCompatActivity() {
         /**
          * Job cancel and join
          */
-        CoroutineScope(Dispatchers.Main).launch {
+        /*CoroutineScope(Dispatchers.Main).launch {
             job = CoroutineScope(Dispatchers.Main).launch {
                 repeat(3) {
                     Log.e(TAG, "Coroutine working inner")
@@ -147,7 +150,25 @@ class MainActivity : AppCompatActivity() {
             delay(4000)
             job.cancelAndJoin()
             Log.e(TAG, "Coroutine working")
+        }*/
+
+        /**
+         * lifeCycle
+         */
+        lifecycleScope.launch {
+            while (true){
+                Log.e(TAG,"run work ...")
+                delay(1000)
+            }
         }
+        CoroutineScope(Dispatchers.Main).launch {
+            delay(3000)
+            Intent(this@MainActivity, SecondActivity::class.java).also {
+                startActivity(it)
+                finish()
+            }
+        }
+
 
     }
 
