@@ -6,6 +6,7 @@ import com.mgm.s1_hilt.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 import javax.inject.Named
+import com.mgm.s1_hilt.NAMED_APP_INFO
 
 
 @AndroidEntryPoint

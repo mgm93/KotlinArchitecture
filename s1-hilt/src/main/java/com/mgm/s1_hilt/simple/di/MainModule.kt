@@ -1,7 +1,7 @@
 package com.mgm.s1_hilt.simple.di
 
-import com.mgm.s1_hilt.simple.NAMED_SITE_NAME
-import com.mgm.s1_hilt.simple.NAMED_USER_NAME
+import com.mgm.s1_hilt.NAMED_SITE_NAME
+import com.mgm.s1_hilt.NAMED_USER_NAME
 import com.mgm.s1_hilt.simple.di.qualifier.SiteName
 import dagger.Module
 import dagger.Provides

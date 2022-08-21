@@ -1,6 +1,6 @@
 package com.mgm.s1_hilt.simple.di
 
-import com.mgm.s1_hilt.simple.NAMED_APP_INFO
+import com.mgm.s1_hilt.NAMED_APP_INFO
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
