@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.mgm.s1_hilt">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".MyApp"
         android:allowBackup="true"
@@ -11,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KotlinArchitecture">
         <activity
-            android:name=".room.NotesActivity"
+            android:name=".retrofit.MoviesActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,10 +22,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".simple.MainActivity"
+            android:name=".room.NotesActivity"
             android:exported="true">
 
         </activity>
+        <activity
+            android:name=".simple.MainActivity"
+            android:exported="true"></activity>
     </application>
 
 </manifest>
