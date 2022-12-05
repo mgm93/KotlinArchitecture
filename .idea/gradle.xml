@@ -13,11 +13,13 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/s1-coroutine" />
+            <option value="$PROJECT_DIR$/s1-datastore" />
             <option value="$PROJECT_DIR$/s1-hilt" />
             <option value="$PROJECT_DIR$/s1-livedata-viewmodel" />
             <option value="$PROJECT_DIR$/s1_navigation" />
             <option value="$PROJECT_DIR$/s1_retrofit" />
             <option value="$PROJECT_DIR$/s1_room" />
+            <option value="$PROJECT_DIR$/s2-flow" />
           </set>
         </option>
       </GradleProjectSettings>
