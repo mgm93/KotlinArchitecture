@@ -10,13 +10,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KotlinArchitecture">
         <activity
-            android:name=".CreateFlowActivity"
+            android:name=".Operators1Activity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".CreateFlowActivity"
+            android:exported="true"></activity>
+        <activity
+            android:name=".LifecycleFlowActivity"
+            android:exported="true">
+
         </activity>
     </application>
 

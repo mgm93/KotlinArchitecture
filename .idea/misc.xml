@@ -6,20 +6,6 @@
         <entry key="..\:/Workspace/kotlin/KotlinArchitecture/app/s1_room/src/main/res/layout/activity_main.xml" value="0.14166666666666666" />
         <entry key="..\:/Workspace/kotlin/KotlinArchitecture/app/src/main/res/layout/activity_main.xml" value="0.22780797101449277" />
         <entry key="..\:/Workspace/kotlin/KotlinArchitecture/app/src/main/res/layout/item_user.xml" value="0.25" />
-        <entry key="..\:/Workspace/kotlin/KotlinArchitecture/s1-coroutine/src/main/res/layout/activity_second.xml" value="0.15590312815338042" />
-        <entry key="..\:/Workspace/kotlin/KotlinArchitecture/s1-datastore/src/main/res/layout/activity_main.xml" value="0.20380434782608695" />
-        <entry key="..\:/Workspace/kotlin/KotlinArchitecture/s1-hilt/src/main/res/layout/activity_main.xml" value="0.2608695652173913" />
-        <entry key="..\:/Workspace/kotlin/KotlinArchitecture/s1-hilt/src/main/res/layout/activity_movies.xml" value="0.20380434782608695" />
-        <entry key="..\:/Workspace/kotlin/KotlinArchitecture/s1-hilt/src/main/res/layout/activity_notes.xml" value="0.15989583333333332" />
-        <entry key="..\:/Workspace/kotlin/KotlinArchitecture/s1-hilt/src/main/res/layout/item_movies.xml" value="0.2441123188405797" />
-        <entry key="..\:/Workspace/kotlin/KotlinArchitecture/s1-hilt/src/main/res/layout/item_notes.xml" value="0.15989583333333332" />
-        <entry key="..\:/Workspace/kotlin/KotlinArchitecture/s1-livedata-viewmodel/src/main/res/layout/activity_main.xml" value="0.20380434782608695" />
-        <entry key="..\:/Workspace/kotlin/KotlinArchitecture/s1-livedata-viewmodel/src/main/res/layout/activity_main2.xml" value="0.20380434782608695" />
-        <entry key="..\:/Workspace/kotlin/KotlinArchitecture/s1-livedata-viewmodel/src/main/res/layout/activity_network.xml" value="0.20380434782608695" />
-        <entry key="..\:/Workspace/kotlin/KotlinArchitecture/s1-livedata-viewmodel/src/main/res/layout/activity_notes.xml" value="0.20380434782608695" />
-        <entry key="..\:/Workspace/kotlin/KotlinArchitecture/s1-livedata-viewmodel/src/main/res/layout/fragment_add_note.xml" value="0.20380434782608695" />
-        <entry key="..\:/Workspace/kotlin/KotlinArchitecture/s1-livedata-viewmodel/src/main/res/layout/fragment_notes_list.xml" value="0.20380434782608695" />
-        <entry key="..\:/Workspace/kotlin/KotlinArchitecture/s1-livedata-viewmodel/src/main/res/layout/item_notes.xml" value="0.20380434782608695" />
         <entry key="..\:/Workspace/kotlin/KotlinArchitecture/s1_retrofit/src/main/res/layout/activity_main.xml" value="0.26766304347826086" />
         <entry key="..\:/Workspace/kotlin/KotlinArchitecture/s1_retrofit/src/main/res/layout/item_movies.xml" value="0.26766304347826086" />
         <entry key="..\:/Workspace/kotlin/KotlinArchitecture/s1_room/src/main/res/drawable/ic_round_add_24.xml" value="0.243" />
@@ -27,7 +13,6 @@
         <entry key="..\:/Workspace/kotlin/KotlinArchitecture/s1_room/src/main/res/layout/activity_main.xml" value="0.26766304347826086" />
         <entry key="..\:/Workspace/kotlin/KotlinArchitecture/s1_room/src/main/res/layout/activity_update_user.xml" value="0.26766304347826086" />
         <entry key="..\:/Workspace/kotlin/KotlinArchitecture/s1_room/src/main/res/layout/item_user.xml" value="0.26766304347826086" />
-        <entry key="..\:/Workspace/kotlin/KotlinArchitecture/s2-flow/src/main/res/layout/activity_create_flow.xml" value="0.25" />
         <entry key="..\:/work/KotlinArchitecture/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/work/KotlinArchitecture/app/src/main/res/layout/fragment_test.xml" value="0.19010416666666666" />
         <entry key="..\:/work/KotlinArchitecture/s1-coroutine/src/main/res/layout/activity_main.xml" value="0.1" />
@@ -40,6 +25,7 @@
         <entry key="..\:/work/KotlinArchitecture/s1_navigation/src/main/res/layout/fragment_profile.xml" value="0.16802536231884058" />
         <entry key="..\:/work/KotlinArchitecture/s1_navigation/src/main/res/layout/fragment_search.xml" value="0.16802536231884058" />
         <entry key="..\:/work/KotlinArchitecture/s1_navigation/src/main/res/menu/bottom_menu.xml" value="0.20416666666666666" />
+        <entry key="..\:/work/KotlinArchitecture/s2-flow/src/main/res/layout/activity_operators1.xml" value="0.125" />
       </map>
     </option>
   </component>
