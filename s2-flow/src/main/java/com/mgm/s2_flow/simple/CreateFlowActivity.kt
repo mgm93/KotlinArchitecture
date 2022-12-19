@@ -1,4 +1,4 @@
-package com.mgm.s2_flow
+package com.mgm.s2_flow.simple
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

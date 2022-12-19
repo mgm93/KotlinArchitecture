@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KotlinArchitecture">
         <activity
-            android:name=".Operators4Activity"
+            android:name=".simple.Operators5Activity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,7 +19,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Operators3Activity"
+            android:name=".simple.Operators4Activity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".simple.Operators3Activity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,7 +32,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Operators2Activity"
+            android:name=".simple.Operators2Activity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -37,7 +41,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Operators1Activity"
+            android:name=".simple.Operators1Activity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -46,10 +50,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".CreateFlowActivity"
+            android:name=".simple.CreateFlowActivity"
             android:exported="true" />
         <activity
-            android:name=".LifecycleFlowActivity"
+            android:name=".simple.LifecycleFlowActivity"
             android:exported="true" />
     </application>
 
