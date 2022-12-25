@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">s2-flow</string>
+    <string name="delete_note">delete</string>
 </resources>

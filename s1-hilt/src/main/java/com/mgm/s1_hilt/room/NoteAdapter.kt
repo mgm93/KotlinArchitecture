@@ -22,12 +22,12 @@ class NoteAdapter @Inject constructor() : RecyclerView.Adapter<NoteAdapter.ViewH
     private lateinit var binding: ItemNotesBinding
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NoteAdapter.ViewHolder {
-        binding = ItemNotesBinding.inflate(LayoutInflater.from(parent.context),parent,false)
+        binding = ItemNotesBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ViewHolder()
     }
 
     override fun onBindViewHolder(holder: NoteAdapter.ViewHolder, position: Int) {
-        holder.setData(differ.currentList[position])
+        holder.bindData(differ.currentList[position])
     }
 
     override fun getItemCount() = differ.currentList.size
@@ -38,27 +38,28 @@ class NoteAdapter @Inject constructor() : RecyclerView.Adapter<NoteAdapter.ViewH
         return position
     }
 
-    inner class ViewHolder : RecyclerView.ViewHolder(binding.root){
-        @SuppressLint("SetTextI18n")
-        fun setData(item:NoteModel){
+    @SuppressLint("SetTextI18n")
+    inner class ViewHolder : RecyclerView.ViewHolder(binding.root) {
+        fun bindData(item: NoteModel) {
             binding.apply {
                 titleTxt.text = "${item.id} : ${item.title}"
                 root.setOnClickListener {
                     onClickListener?.let {
-                        it(item) }
+                        it(item)
+                    }
                 }
             }
         }
     }
 
     //onClick
-    private var onClickListener : ((NoteModel) -> Unit)? = null
+    private var onClickListener: ((NoteModel) -> Unit)? = null
 
-    fun setOnItemClickListener(listener: ((NoteModel)-> Unit)){
+    fun setOnItemClickListener(listener: ((NoteModel) -> Unit)) {
         onClickListener = listener
     }
 
-    private val differCallBack = object : DiffUtil.ItemCallback<NoteModel>(){
+    private val differCallBack = object : DiffUtil.ItemCallback<NoteModel>() {
         override fun areItemsTheSame(oldItem: NoteModel, newItem: NoteModel): Boolean {
             return oldItem.id == newItem.id
         }
@@ -68,5 +69,5 @@ class NoteAdapter @Inject constructor() : RecyclerView.Adapter<NoteAdapter.ViewH
         }
     }
 
-    var differ = AsyncListDiffer(this,differCallBack)
+    var differ = AsyncListDiffer(this, differCallBack)
 }

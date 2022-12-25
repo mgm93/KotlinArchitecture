@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KotlinArchitecture">
         <activity
-            android:name=".NoteActivity"
+            android:name=".room.NoteActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,7 +30,7 @@
         </activity>
         <activity
             android:name=".simple.Operators5Activity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".simple.Operators4Activity"
             android:exported="true" />

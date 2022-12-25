@@ -26,17 +26,17 @@ class NoteAdapter @Inject constructor() : RecyclerView.Adapter<NoteAdapter.ViewH
     }
 
     override fun onBindViewHolder(holder: NoteAdapter.ViewHolder, position: Int) {
-        holder.setData(noteList[position])
+        holder.bindData(noteList[position])
     }
 
     override fun getItemCount() = noteList.size
 
     inner class ViewHolder : RecyclerView.ViewHolder(binding.root) {
         @SuppressLint("SetTextI18n")
-        fun setData(item: NoteModel) {
+        fun bindData(item: NoteModel) {
             binding.apply {
+                titleTxt.text = "${item.id} : ${item.name}"
                 deleteImg.setOnClickListener {
-                    titleTxt.text = "${item.id} : ${item.name}"
                     onItemClickListener?.let {
                         it(item)
                     }
