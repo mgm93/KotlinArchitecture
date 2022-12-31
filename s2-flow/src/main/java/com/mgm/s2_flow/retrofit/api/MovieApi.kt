@@ -1,9 +1,9 @@
 package com.mgm.s2_flow.retrofit.api
 
-import com.mgm.s2_flow.retrofit.model.ResponseMovieList
+import com.mgm.s2_flow.retrofit.model.ResponseGenresList
+import com.mgm.s2_flow.retrofit.model.ResponseMovies
 import retrofit2.Response
 import retrofit2.http.GET
-import retrofit2.http.Path
 import retrofit2.http.Query
 
 /**
@@ -13,5 +13,8 @@ import retrofit2.http.Query
 interface MovieApi {
 
     @GET("movies")
-    suspend fun getMoviesList(@Query("page") page: Int) : Response<ResponseMovieList>
+    suspend fun getMoviesList(@Query("page") page: Int) : Response<ResponseMovies>
+
+    @GET("genres")
+    suspend fun getGenresList() : Response<ResponseGenresList>
 }

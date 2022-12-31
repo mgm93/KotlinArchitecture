@@ -3,9 +3,9 @@ package com.mgm.s2_flow.retrofit.model
 
 import com.google.gson.annotations.SerializedName
 
-data class ResponseMovieList(
+data class ResponseMovies(
     @SerializedName("data")
-    val `data`: List<Data?>?,
+    val `data`: List<Data>,
     @SerializedName("metadata")
     val metadata: Metadata?
 ) {

@@ -1,7 +1,7 @@
 package com.mgm.s2_flow.retrofit.repository
 
 import com.mgm.s2_flow.retrofit.api.MovieApi
-import com.mgm.s2_flow.retrofit.model.ResponseMovieList
+import com.mgm.s2_flow.retrofit.model.ResponseMovies
 import com.mgm.s2_flow.utils.MyResponse
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
@@ -16,7 +16,7 @@ import javax.inject.Inject
  */
 class MovieRepository @Inject constructor(private val api: MovieApi) {
 
-    suspend fun getMoviesList(): Flow<MyResponse<ResponseMovieList>> {
+    suspend fun getMoviesList(): Flow<MyResponse<ResponseMovies>> {
         return flow {
             emit(MyResponse.loading())
             val list = api.getMoviesList(1)

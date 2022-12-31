@@ -9,6 +9,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.mgm.s2_flow.databinding.ActivityRetrofitBinding
 import com.mgm.s2_flow.retrofit.adapter.ListMoviesAdapter
+import com.mgm.s2_flow.retrofit.repository.MovieViewModelParallel
+import com.mgm.s2_flow.retrofit.viewmodel.MovieViewModelSeries
 import com.mgm.s2_flow.retrofit.viewmodel.RetrofitViewModel
 import com.mgm.s2_flow.utils.MyResponse
 import dagger.hilt.android.AndroidEntryPoint
@@ -23,7 +25,9 @@ class RetrofitActivity : AppCompatActivity() {
     @Inject
     lateinit var moviesAdapter: ListMoviesAdapter
 
-    private val viewModel: RetrofitViewModel by viewModels()
+//    private val viewModel: RetrofitViewModel by viewModels()
+//    private val viewModel: MovieViewModelSeries by viewModels()
+    private val viewModel: MovieViewModelParallel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,7 +38,7 @@ class RetrofitActivity : AppCompatActivity() {
             //call method
             viewModel.getMoviesList()
 
-            viewModel.listMovies.observe(this@RetrofitActivity) {
+            viewModel.moviesList.observe(this@RetrofitActivity) {
                 when (it.status) {
                     MyResponse.Status.LOADING -> {
                         loading.visibility = View.VISIBLE
@@ -42,7 +46,7 @@ class RetrofitActivity : AppCompatActivity() {
                     MyResponse.Status.SUCCESS -> {
                         loading.visibility = View.GONE
                         //setAdapter data
-                        moviesAdapter.differ.submitList(it.data!!.data)
+                        moviesAdapter.differ.submitList(it.data)
                         //recycler
                         listMovies.apply {
                             layoutManager = LinearLayoutManager(this@RetrofitActivity)

@@ -8,8 +8,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.mgm.s2_flow.databinding.ItemMoviesBinding
-import com.mgm.s2_flow.retrofit.model.ResponseMovieList
-import com.mgm.s2_flow.retrofit.model.ResponseMovieList.*
+import com.mgm.s2_flow.retrofit.model.ResponseMovies.*
 import javax.inject.Inject
 
 /**

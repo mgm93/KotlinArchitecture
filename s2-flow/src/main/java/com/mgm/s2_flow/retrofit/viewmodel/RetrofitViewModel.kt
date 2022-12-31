@@ -3,7 +3,7 @@ package com.mgm.s2_flow.retrofit.viewmodel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.mgm.s2_flow.retrofit.model.ResponseMovieList
+import com.mgm.s2_flow.retrofit.model.ResponseMovies
 import com.mgm.s2_flow.retrofit.repository.MovieRepository
 import com.mgm.s2_flow.utils.MyResponse
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -16,7 +16,7 @@ import javax.inject.Inject
  */
 @HiltViewModel
 class RetrofitViewModel @Inject constructor(private val repository: MovieRepository): ViewModel(){
-    val listMovies = MutableLiveData<MyResponse<ResponseMovieList>>()
+    val listMovies = MutableLiveData<MyResponse<ResponseMovies>>()
 
     fun getMoviesList() = viewModelScope.launch {
         repository.getMoviesList().collect{
